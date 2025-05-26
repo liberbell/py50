@@ -9,6 +9,7 @@ print(ws_test1.cell(row=4, column=7).value)
 
 wb_test2 = openpyxl.load_workbook("excel/bill_test2.xlsx")
 ws_test2 = wb_test2.worksheets[0]
+print(ws_test2.cell(4, 7).value)
 
 wb_test3 = openpyxl.load_workbook("excel/bill_test3.xlsx")
 ws_test3 = wb_test3.worksheets[0]
