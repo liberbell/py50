@@ -1,3 +1,4 @@
 import openpyxl
 
-wb = openpyxl.Workbook("excel/bill_list.xlsx", encoding="utf-8")
+wb = openpyxl.load_workbook("excel/bill_list.xlsx")
+ws = wb["Sheet1"]
