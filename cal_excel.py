@@ -14,3 +14,6 @@ print(ws_test2.cell(4, 7).value)
 
 wb_test3 = openpyxl.load_workbook("excel/bill_test3.xlsx")
 ws_test3 = wb_test3.worksheets[0]
+
+ws_cell = ws_test1.cell(3, 14).value
+wb.save("excel/bill_list.xlsx")
