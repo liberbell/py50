@@ -3,6 +3,10 @@ from openpyxl.styles import Font, PatternFill, Alignment
 from openpyxl.styles.borders import Border, Side
 from glob import glob
 
+wb2 = openpyxl.Workbook()
+ws2 = wb2.active
+ws2_title = "Sheet1"
+
 wb = openpyxl.load_workbook("excel/bill_list.xlsx")
 ws = wb["Sheet1"]
 
