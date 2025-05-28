@@ -15,6 +15,9 @@ border = Border(left=side, bottom=side, right=side, top=side)
 for i in range(len(headers)):
     ws2.cell(1, i + 1).value = headers[i]
     ws2.cell(1, i + 1).font = Font(bold=True)
+    ws2.cell(1, i + 1).fill = PatternFill("solid", fgColor="FFA500")
+    ws2.cell(1, i + 1).alignment = Alignment(horizontal="centerContinuous")
+    ws2.cell(1, i + 1).border = border
 
 files = sorted(glob("excel/bill_test*.xlsx"))
 
