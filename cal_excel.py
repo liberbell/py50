@@ -12,6 +12,10 @@ columns = ["A", "B", "C", "D"]
 side = Side(style="thin", color="000000")
 border = Border(left=side, bottom=side, right=side, top=side)
 
+for i in range(len(headers)):
+    ws2.cell(1, i + 1).value = headers[i]
+    ws2.cell(1, i + 1).font = Font(bold=True)
+
 files = sorted(glob("excel/bill_test*.xlsx"))
 
 for file in files:
@@ -27,4 +31,4 @@ for file in files:
     ws2.cell(line, 4).number_format = r"yyyy/m/d"
     ws2.cell(line, 4).value = ws_test.cell(4, 14).value
 
-wb2.save("excel/bill_list.xlsx")
+wb2.save("excel/bill_list_orginal.xlsx")
