@@ -8,7 +8,9 @@ ws2 = wb2.active
 ws2_title = "Sheet1"
 
 headers = ["Bill Number", "Bill Name", "Amount", "Date"]
-colmuns = ["A", "B", "C", "D"]
+columns = ["A", "B", "C", "D"]
+side = Side(style="thin", color="000000")
+border = Border(left=side, bottom=side, right=side, top=side)
 
 wb = openpyxl.load_workbook("excel/bill_list.xlsx")
 ws = wb["Sheet1"]
