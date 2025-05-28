@@ -7,6 +7,9 @@ wb2 = openpyxl.Workbook()
 ws2 = wb2.active
 ws2_title = "Sheet1"
 
+headers = ["Bill Number", "Bill Name", "Amount", "Date"]
+colmuns = ["A", "B", "C", "D"]
+
 wb = openpyxl.load_workbook("excel/bill_list.xlsx")
 ws = wb["Sheet1"]
 
