@@ -19,5 +19,6 @@ ws.cell(2, 1).value = ws_test1.cell(3, 14).value
 ws.cell(2, 2).value = ws_test1.cell(3, 1).value
 ws.cell(2, 3).number_format = r"¥#,##0;¥-#,##0"
 ws.cell(2, 3).value = ws_test1.cell(15, 4).value
+ws.cell(2, 4).number_format = r"yyyy/m/d"
 ws.cell(2, 4).value = ws_test1.cell(4, 14).value
 wb.save("excel/bill_list.xlsx")
