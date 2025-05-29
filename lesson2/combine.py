@@ -10,7 +10,9 @@ df = pd.read_excel("excel_files/sell_list.xlsx", sheet_name="Sheet1")
 
 # print(df[["担当者", "売上金額"]])
 
-print(df)
-print(df.iloc[2, 3])
-df.iloc[2, 3] = "bob"
-print(df)
+# print(df)
+# print(df.iloc[2, 3])
+# df.iloc[2, 3] = "bob"
+# print(df)
+
+print(df.iloc[1:4, 0:3])
