@@ -9,3 +9,5 @@ print(df["売上金額"].min())
 print(df["売上金額"].max())
 
 print(df[["担当者", "売上金額"]])
+
+print(df.iloc[2, 3])
