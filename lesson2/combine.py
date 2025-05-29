@@ -15,5 +15,7 @@ df = pd.read_excel("excel_files/sell_list.xlsx", sheet_name="Sheet1")
 # df.iloc[2, 3] = "bob"
 # print(df)
 
-print(df.iloc[1:4, 0:3])
-print(df.iloc[1:4, [0, 2]])
+# print(df.iloc[1:4, 0:3])
+# print(df.iloc[1:4, [0, 2]])
+
+print(df["商品名"].str.replace("PC", "パソコン"))
