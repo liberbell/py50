@@ -7,3 +7,5 @@ print(df["売上金額"].mean())
 print(df["売上金額"].sum())
 print(df["売上金額"].min())
 print(df["売上金額"].max())
+
+print(df[["担当者", "売上金額"]])
