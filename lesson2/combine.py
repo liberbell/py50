@@ -16,3 +16,4 @@ df = pd.read_excel("excel_files/sell_list.xlsx", sheet_name="Sheet1")
 # print(df)
 
 print(df.iloc[1:4, 0:3])
+print(df.iloc[1:4, [0, 2]])
