@@ -14,4 +14,4 @@ print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_i
 print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].iloc[40, 3])
 
 df2 = df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_index(drop=True)
-print(df2)
+print("田中の売上金額合計:",df2["売上金額"].sum())
