@@ -19,3 +19,5 @@ df = pd.read_excel("excel_files/sell_list.xlsx", sheet_name="Sheet1")
 # print(df.iloc[1:4, [0, 2]])
 
 print(df["商品名"].str.replace("PC", "パソコン"))
+df["商品名"] = df["商品名"].str.replace("PC", "パソコン")
+print(df)
