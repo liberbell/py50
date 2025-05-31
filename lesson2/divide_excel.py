@@ -2,3 +2,5 @@ import pandas as pd
 
 df = pd.read_excel("excel_files/sell_list.xlsx", sheet_name="Sheet1")
 print(df)
+
+print(df[df["担当者"] == "田中"])
