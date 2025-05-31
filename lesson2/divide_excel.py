@@ -13,5 +13,11 @@ print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_i
 
 print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].iloc[40, 3])
 
-df2 = df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_index(drop=True)
-print("田中の売上金額合計:",df2["売上金額"].sum())
+df_tanaka = df[df["担当者"] == "田中"].reset_index(drop=True)
+print(df_tanaka)
+
+df_nakamura = df[df["担当者"] == "中村"].reset_index(drop=True)
+print(df_nakamura)
+
+df_suzuki = df[df["担当者"] == "鈴木"].reset_index(drop=True)
+print(df_suzuki)
