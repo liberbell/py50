@@ -12,3 +12,6 @@ print(df[(df["担当者"] == "田中") & (df["売上金額"] > 300000)])
 print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_index(drop=True))
 
 print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].iloc[40, 3])
+
+df2 = df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_index(drop=True)
+print(df2)
