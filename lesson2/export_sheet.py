@@ -14,5 +14,5 @@ for name in df_name_unique:
     print(df_temp)
     print(name + "の売上合計: ", revenue_sum)
 
-    with pd.ExcelWriter("excel_files/revenue_new.xlsx", mode="a") as f:
+    with pd.ExcelWriter("excel_files/revenue_new.xlsx", engine="openpyxl", mode="a") as f:
         df_temp.to_excel(f, sheet_name=sheet_name, index=False)
