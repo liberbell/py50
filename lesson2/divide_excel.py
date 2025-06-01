@@ -13,12 +13,7 @@ print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].reset_i
 
 print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].iloc[40, 3])
 
-df_tanaka = df[df["担当者"] == "田中"].reset_index(drop=True)
-print(df_tanaka)
-df_tanaka.to_excel("excel_files/revenue_tanaka.xlsx", index=False)
-
-df_nakamura = df[df["担当者"] == "中村"].reset_index(drop=True)
-print(df_nakamura)
-
-df_suzuki = df[df["担当者"] == "鈴木"].reset_index(drop=True)
-print(df_suzuki)
+name_list = ["田中", "佐藤", "中村", "鈴木"]
+for name in name_list:
+    df_name = df[df["担当者"] == name].reset_index(drop=True)
+    df_name.to_excel(f"excel_files/revenue_{name}.xlsx", index=False)
