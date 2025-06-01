@@ -8,6 +8,7 @@ df_name_unique = df_renew["担当者"].unique()
 
 for name in df_name_unique:
     df_temp = df_renew[df_renew["担当者"] == name]
+    revenue_sum = df_temp["売上金額"].sum()
     
     print(df_temp)
-    print(name + "の売上合計: " + df_temp["売上金額"].sum())
+    print(name + "の売上合計: ", revenue_sum)
