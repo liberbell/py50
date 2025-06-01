@@ -15,8 +15,7 @@ print(df[(df["担当者"] == "田中") | (df["売上金額"] >= 300000)].iloc[40
 
 name_list = ["田中", "佐藤", "中村", "鈴木"]
 df_name_unique = df["担当者"].unique()
-print(name_list)
-print(df_name_unique)
-# for name in name_list:
-#     df_name = df[df["担当者"] == name].reset_index(drop=True)
-#     df_name.to_excel(f"excel_files/revenue_{name}.xlsx", index=False)
+
+for name in df_name_unique:
+    df_name = df[df["担当者"] == name].reset_index(drop=True)
+    df_name.to_excel(f"excel_files/revenue_{name}.xlsx", index=False)
