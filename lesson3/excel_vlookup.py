@@ -8,3 +8,5 @@ print(df_division)
 
 df_merge = pd.merge(df_history1, df_division, on="社員番号")
 print(df_merge.iloc[:, [0, 1, 2, 9, 3, 4, 5, 6, 7]].sort_values("ID"))
+
+df_merge.to_excel("excel_files/merge_history_division.xlsx", index=False)
