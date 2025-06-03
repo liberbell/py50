@@ -11,7 +11,7 @@ df_merge = df_merge.iloc[:, [0, 1, 2, 9, 3, 4, 5, 6, 7]].sort_values("ID")
 
 df_merge2 = pd.merge(df_history1, df_division, left_on="担当者", right_on="名前")
 df_merge2 = df_merge2.iloc[:, [0, 1, 2, 10, 3, 4, 5, 6, 7]].sort_values("ID")
-df_merge2.rename(columns=["社員番号_x": "社員番号"])
+df_merge2.rename(columns={"社員番号_x":"社員番号"})
 
 print(df_merge2)
 
