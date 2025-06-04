@@ -5,4 +5,5 @@ df_history_may = pd.read_csv("excel_files/history_may.csv", encoding="shift-jis"
 # print(df_history_mar)
 # print(df_history_may)
 
-df_merge = pd.merge(df_history_may, df_history_may, on="ID", how="outer", indicator=True)
+df_merge = pd.merge(df_history_mar, df_history_may, on="ID", how="outer", indicator=True)
+print(df_merge)
