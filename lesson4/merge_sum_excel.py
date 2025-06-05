@@ -4,7 +4,8 @@ month_list = ["4月", "5月", "6月"]
 df_concat = pd.DataFrame()
 
 for month in month_list:
-    df_concat = pd.read_excel("excel_files/revenue_permon.xlsx", engine="openpyxl", sheet_name=month)
+    df_month = pd.read_excel("excel_files/revenue_permon.xlsx", engine="openpyxl", sheet_name=month)
+    df_concat = pd.DataFrame(df_month)
 
 print(df_concat)
 
