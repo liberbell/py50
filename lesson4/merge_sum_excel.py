@@ -1,6 +1,10 @@
 import pandas as pd
 
 month_list = ["4月", "5月", "6月"]
+sheet_name = pd.ExcelFile("excel_files/revenue_permon.xlsx")
+print(sheet_name.sheet_names)
+
+
 df_concat = pd.DataFrame()
 
 for month in month_list:
