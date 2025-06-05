@@ -11,4 +11,9 @@ for month in sheet_name:
 
 df_concat["売上金額"] = df_concat["単価"] * df_concat["個数"]
 
+df_employee = pd.read_excel("excel_files/employee_list.xlsx")
+df_employee["社員番号"] = df_employee["社員番号"].str.replace("A-", "")
+df_employee["社員番号"] = df_employee["社員番号"].str.replace("B-", "")
+print(df_employee)
+
 print(df_concat)
