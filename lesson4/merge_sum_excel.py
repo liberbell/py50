@@ -24,7 +24,7 @@ df_name_list = df_merge_employee["名前"].unique()
 print(df_name_list)
 for name in df_name_list:
     df_divide_employee = df_merge_employee[df_merge_employee["名前"] == name]
-    df_pivot = df_divide_employee.pivot_table(index="取引先", columns="商品名", values="売上金額", aggfunc="sum", fill_value=0)
+    df_pivot = df_divide_employee.pivot_table(index="取引先", columns="商品名", values="売上金額", aggfunc="sum", fill_value=0, margins=True)
     print(df_divide_employee)
     print(df_pivot)
 
