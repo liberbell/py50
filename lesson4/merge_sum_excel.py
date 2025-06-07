@@ -15,7 +15,7 @@ df_employee = pd.read_excel("excel_files/employee_list.xlsx")
 # df_employee["社員番号"] = df_employee["社員番号"].str.replace("A-", "")
 df_employee["社員番号"] = df_employee["社員番号"].str.replace("[A-Z]-", "", regex=True)
 df_employee = df_employee.astype({"社員番号":int})
-df_employee = df_employee.iloc[:, [0, 1, 2, 3, 8, 4, 5, 6, 7]]
 
 df_merge_employee = pd.merge(df_concat, df_employee, on="社員番号")
+df_merge_employee = df_merge_employee.iloc[:, [0, 1, 2, 3, 8, 4, 5, 6, 7]]
 print(df_merge_employee)
