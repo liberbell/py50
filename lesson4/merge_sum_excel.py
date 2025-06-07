@@ -24,4 +24,6 @@ df_name_list = df_merge_employee["名前"].unique()
 print(df_name_list)
 for name in df_name_list:
     df_divide_employee = df_merge_employee[df_merge_employee["名前"] == name]
+    df_pivot = df_divide_employee.pivot_table(index="取引先", columns="商品名")
     print(df_divide_employee)
+
