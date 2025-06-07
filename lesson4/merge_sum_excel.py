@@ -25,7 +25,7 @@ for name in df_name_list:
     df_divide_employee = df_merge_employee[df_merge_employee["名前"] == name]
     df_pivot = df_divide_employee.pivot_table(index="取引先", columns="商品名", values="売上金額", aggfunc="sum", fill_value=0, margins=True, margins_name="総計")
     # df_pivot.to_excel("excel_files/revenue_per_employee.xlsx", sheet_name=name, engine="openpyxl")
-    with pd.ExcelWriter("excel_files/revenue_per_employee.xlsx", mode="a", engine="openpyxl") as f:
+    with pd.ExcelWriter("excel_files/revenue_per_employee.xlsx", mode="w", engine="openpyxl") as f:
         df_pivot.to_excel(f, sheet_name=name, engine="openpyxl")
 
 
