@@ -20,7 +20,7 @@ df_merge_employee = pd.merge(df_concat, df_employee, on="社員番号")
 df_merge_employee = df_merge_employee.iloc[:, [0, 1, 2, 3, 8, 4, 5, 6, 7]]
 print(df_merge_employee)
 
-df_name_list = df_merge_employee["担当者"].unique()
+df_name_list = df_merge_employee["名前"].unique()
 print(df_name_list)
 for name in df_name_list:
     df_divide_employee = df_merge_employee[df_merge_employee["名前"] == name]
