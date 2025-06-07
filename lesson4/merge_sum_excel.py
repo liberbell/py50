@@ -19,3 +19,6 @@ df_employee = df_employee.astype({"社員番号":int})
 df_merge_employee = pd.merge(df_concat, df_employee, on="社員番号")
 df_merge_employee = df_merge_employee.iloc[:, [0, 1, 2, 3, 8, 4, 5, 6, 7]]
 print(df_merge_employee)
+
+df_divide_employee = df_merge_employee[df_merge_employee["名前"] == "田中"]
+print(df_divide_employee)
